@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block head %}
+{% block title %}BlogArt{% endblock title %}
+{% block blogactive %} active {% endblock blogactive %}
+{% load static %}
+<link rel='stylesheet' href="{% static 'css/blog.css' %}">
+{% endblock head %}
+{% block body %}
+{% load humanize %}
+{% load extras1 %}
+
+
+
+
+
+
+<div class="container my-4">
+{% for chunk in allPosts|chunks:3 %}
+  <div class="row">
+    {% for post in chunk %}
+        <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <a href="/blog/{{post.slug}}"><img src="/media/{{post.image}}" width="350px" height="300px" style="margin-left: -1px;"></a>
+        <div class="card-body">
+        <h3 class="mb-0"><a class="text-dark" id="under" href="/blog/{{post.slug}}">{{post.title}}</a></h3>
+      <div class="mb-1 text-muted">{{post.timefield}}</div>
+          <p class="card-text mb-auto">
+        <div class="preview">{{post.content|safe|truncatechars:70}}</div>
+      </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+            
+            <a href="/blog/{{post.slug}}" role="button" class="btn btn-sm btn-outline-secondary">View</a>
+              <!--<a href="/blog/{{post.slug}}" role="button" class="btn btn-sm btn-outline-secondary">View<button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+             --> 
+             <button type="button" class="btn btn-sm btn-outline-secondary">{{post.views}} Views</button>
+            </div>
+            <small class="text-muted">{{post.timefield | naturaltime}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
+
+
+
+
+
+{% endblock body %}
+
+{% block script %}
+<script>
+  let previews = document.getElementsByClassName('preview')
+  Arrays.from(previews).forEach((element) => {
+    element.innerHTML = element.innerText;
+  })
+</script>
+{% endblock script %}
+
+<script>
+
+</script>

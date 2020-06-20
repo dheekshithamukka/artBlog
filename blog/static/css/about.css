@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+}
+h1{
+    color: black;
+
+}
+h3{
+    color: white;
+}
+h6{
+    color: rgb(148, 156, 160);
+}
+.jumbotron{
+    margin-left: 80px;
+    margin-top: 25px;
+    width: 87%;
+    min-height: 200px;
+    background-image: linear-gradient(red, yellow);
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    margin-left: 800px;
+    margin-top: 160px;
+    background-color: rgb(134, 41, 61);
+    border-color: #8064A2;
+}
+
+
+
+p{
+    color: white;
+}

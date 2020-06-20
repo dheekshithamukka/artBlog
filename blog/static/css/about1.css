@@ -1,0 +1,107 @@
+.demo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+body{
+    background-color: black;
+    min-width: 100%;
+}
+.textanime{
+    color: black;
+    margin: 0;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h2{
+    color: white;
+}
+h3{
+    color: white;
+}
+h6{
+    color: rgb(148, 156, 160);
+}
+.anime::before{
+    content: "";
+    animation: words 6s infinite;
+    color: #cc2626;
+}
+
+
+@keyframes words{
+    0%{
+        content: "artist.";
+    }
+    25%{
+        content: "programmer.";
+    }
+    50%{
+        content: "blogger.";
+    }
+    75%{
+        content: "developer.";
+    }
+    100%{
+        content: "web designer.";
+    }
+    125%{
+        content: "singer.";
+    }
+}
+.demo{
+    margin-left: 80px;
+    margin-top: 25px;
+    width: 87%;
+    min-height: 238px;
+    background-image: linear-gradient(red, yellow);
+}
+
+
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    margin-left: 800px;
+    margin-top: 160px;
+    background-color: rgb(134, 41, 61);
+    border-color: #8064A2;
+}
+
+p{
+    color: white;
+}
+
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 50%;
+}
+
+.lead{
+    color: black;
+}
+.para{
+    color: black;
+}
+
+.about{
+    margin-left: 80px;
+    margin-top: 25px;
+    width: 87%;
+}
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:visited,
+.btn-danger:focus {
+    margin-left: 850px;
+    margin-top: 20px;
+    background-color: rgb(134, 41, 61);
+    border-color: #8064A2;
+}

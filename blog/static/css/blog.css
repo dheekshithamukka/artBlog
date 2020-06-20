@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+}
+h2, p{
+    color: black;
+}
+#under{
+    text-decoration: none;
+    color: black;
+}
+button{
+    margin-left: 20px;
+}

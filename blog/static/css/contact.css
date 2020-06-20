@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+label, h3{
+    color: white;
+}
+#emailId{
+    color: rgb(148, 156, 160);
+}
+.form-control{
+    background-color: black;
+    color: wheat;
+}
+.form-control:hover{
+    background-color: black
+}
